@@ -2,7 +2,6 @@
 - name: Ensure dependencies are installed.
   package:
     name:
-      - curl
       - libselinux-python
       - initscripts
     state: installed
