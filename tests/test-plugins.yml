@@ -10,7 +10,8 @@
     jenkins_plugin_timeout: 120
 
   pre_tasks:
-    - include: java-8.yml
+    - import_tasks: setup.yml
+    - import_tasks: java-8.yml
 
   roles:
     - geerlingguy.java

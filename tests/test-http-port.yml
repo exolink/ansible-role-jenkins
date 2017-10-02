@@ -5,7 +5,8 @@
     jenkins_http_port: 8081
 
   pre_tasks:
-    - include: java-8.yml
+    - import_tasks: setup.yml
+    - import_tasks: java-8.yml
 
   roles:
     - geerlingguy.java
