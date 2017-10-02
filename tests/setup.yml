@@ -1,0 +1,16 @@
+---
+# Debian
+- name: Ensure prerequisite are installed.
+  apt:
+    name:
+      - curl
+    state: installed
+  when: ansible_os_family == 'Debian'
+
+# RedHat
+- name: Ensure prerequisite are installed.
+  package:
+    name:
+      - curl
+    state: installed
+  when: ansible_os_family == 'RedHat'
